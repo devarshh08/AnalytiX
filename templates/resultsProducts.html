@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600&family=Lobster&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="\static\output.css" rel="stylesheet">
+    <!-- <link href="\static\output2.css" rel="stylesheet"> -->
+    <script>
+        function focusAboutSection() {
+            var section = document.getElementById("ab");
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+        function focusHomeSection() {
+            var section = document.getElementById("homesection");
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+        function focusContactUsSection() {
+            var section = document.getElementById("contactsection");
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</head>
+<body >
+    <div class="gradient-text">
+        <div class="s1">
+        <nav class="navbar">
+            <a href="" class="mnhd">Analytix</a>
+            <div class="ht">
+                <a href="http://127.0.0.1:5000/" onclick="focusHomeSection()"class="anc">Home</a>
+                <a href="http://127.0.0.1:5000/" onclick="focusSection()"class="anc">Company</a>
+                <a href="http://127.0.0.1:5000/" onclick="focusSection()"class="anc">Services</a>
+                <a href="http://127.0.0.1:5000/" onclick="focusAboutSection()"class="anc">About Us</a>
+                <a href="http://127.0.0.1:5000/" onclick="focusContactUsSection()"class="anc">Contact Us</a>
+            </div>
+        </nav>
+    </div>
+<!-- 
+    <div class="fullbody">
+        <hr class="line">
+        {% for row in results %}
+        <div class="card-container">
+            <div class="card">
+                <div class="card-front">
+                    <div class="name">
+                      {{row[0]}}
+                    </div>
+                </div>
+                <div class="card-back">
+                    <p>Description</p>
+                    <p>{{row[1]}}</p>
+                    <p>₹{{row[2]}}</p>
+                </div>
+            </div>            
+        </div>
+        {% endfor %}
+    </div> -->
+    <h1>Filtered Results</h1>
+    <table>
+        <tr>
+            <th>Image</th>
+            <th class="center-justify">Product</th>
+            <th class="center-justify">Rating</th>
+            <th class="center-justify">Price</th>
+            <th class="center-justify">RAM</th>
+            <th class="center-justify">ROM</th>
+            <th class="center-justify">Processor</th>
+            <th class="center-justify">Expandable Storage</th>
+            <th class="center-justify">Front Camera</th>
+            <th class="center-justify">Rear Camera</th>
+            <th class="center-justify">SIM Slot</th>
+        </tr>
+        {% for result in results %}
+        <tr>
+            <td class="images"><img class="tableimg" src="{{ result[10] }}" alt=""></td>
+            <td class="center-justify">{{ result[0] }}</td>
+            <td class="center-justify">{{ result[1] }}</td>
+            <td class="center-justify">₹{{ result[2] }}</td>
+            <td class="center-justify">{{ result[3] }}</td>
+            <td class="center-justify">{{ result[4] }}</td>
+            <td class="center-justify">{{ result[5] }}</td>
+            <td class="center-justify">{{ result[9] }}</td>
+            <td class="center-justify">{{ result[6] }}</td>
+            <td class="center-justify">{{ result[7] }}</td>
+            <td class="center-justify">{{ result[8] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+<hr class="line">
+        
+<div class="ft">
+    <a href="http://127.0.0.1:5000/"  onclick="focusHomeSection()" class="ancc">Home</a>
+    <a href="http://127.0.0.1:5000/"onclick="focusProductsSection()" class="ancc">Products</a>
+    <a href="http://127.0.0.1:5000/" onclick="focusSection()"class="ancc">Services</a>
+    <a href="http://127.0.0.1:5000/" onclick="focusAboutSection()" class="ancc">About Us</a>
+    <a href="http://127.0.0.1:5000/" onclick="focusContactUsSection()" class="ancc">Contact Us</a>
+</div>
+
+</body>
+</html>

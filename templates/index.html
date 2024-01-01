@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@600&family=Lobster&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+    <link href="/static/output.css" rel="stylesheet">
+    <script>
+        function focusAboutSection() {
+            var section = document.getElementById("ab");
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+        function focusHomeSection() {
+            var section = document.getElementById("homesection");
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+        function focusContactUsSection() {
+            var section = document.getElementById("contactsection");
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+        function focusCompanySection() {
+            var section = document.getElementById("companysection");
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+        function focusReviewSection() {
+            var section = document.getElementById("reviewsection");
+            section.scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</head>
+<body >
+    <div class="gradient-text">
+        <div class="s1">
+        <nav class="navbar">
+            <a href="" class="mnhd">Analytix</a>
+            <div class="ht">
+                <a href="#" onclick="focusHomeSection()"class="anc">Home</a>
+                <a href="#" onclick="focusCompanySection()"class="anc">Company</a>
+                <a href="#" onclick="focusReviewSection()"class="anc">Review</a>
+                <a href="#" onclick="focusAboutSection()"class="anc">About Us</a>
+                <a href="#" onclick="focusContactUsSection()"class="anc">Contact Us</a>
+            </div>
+        </nav>
+ 
+
+
+        <hr class="line">
+
+
+        <div>
+        <div class="slider" id="homesection">
+            <span id="head">Find Your Perfect Smartphone at <br> Our Online Store </span>
+
+<span id="con">With a wide variety of smartphones available, we have the perfect device for you.</span>
+                <div class="imgslider" >
+
+                </div>
+        </div>
+    </div>
+</div>
+   <hr class="line">
+
+
+
+
+        <div class="company" id="companysection">
+            <div class="text">
+                <button class="btn t" id="b1" onclick="window.location">Company</button>
+            <div class="hd t ">Find best smartphone <br> for yourself by <br> Company tag.</div>
+            <!-- <div class="ct t">
+                Get the smartphone that best
+                <br> suits your company filter
+            </div> -->
+            <form action="/filter" method="post"  class="formcompany">
+                <label class="forminput" for="n">Select the number of companies:</label>
+                <input class="forminput inp1" type="number" id="n" name="n" min="1" max="15" required>
+                <br>
+                <label class="forminput" for="budget">Select budget range:</label>
+                <select class="forminput" id="budget" name="budget">
+                    <option value="1000-10000">₹1000-10000</option>
+                    <option value="10000-20000">₹10000-20000</option>
+                    <option value="20000-30000">₹20000-30000</option>
+                    <option value="30000-40000">₹30000-40000</option>
+                    <option value="40000-50000">₹40000-50000</option>
+                    <option value="50000-60000">₹50000-60000</option>
+                    <!-- Add more budget options as needed -->
+                </select>
+                <br>
+                <input class="forminput formbtn " type="submit" value="Filter">
+            </form>
+            
+        </div>
+        <figure class="image">
+            <img  class="im" src="/static/Rev.gif" alt="">
+        </figure>
+
+        </div>
+
+        <hr class="line">
+
+
+        <div class="company" id="reviewsection">
+            <figure class="image">
+                <img  class="im" src="/static/giphy.gif" alt="">
+            </figure>
+            <div class="text">
+                <button class="btn t"  id="b1" onclick="window.location">Products</button>
+            <div class="hd t ">Find best smartphone <br> for yourself by <br> Review tag.</div>
+            <!-- <div class="ct t">
+                Get the smartphone that best
+                <br> suits your Review filter
+            </div> -->
+            <form action="/filter2" method="post"  class="formcompany">
+                <label class="forminput" for="n">Select the number of companies:</label>
+                <input class="forminput inp1" type="number" id="n" name="n" min="1" max="15" required>
+                <br>
+                <label class="forminput" for="budget">Select budget range:</label>
+                <select class="forminput" id="budget" name="budget">
+                    <option value="1000-10000">₹1000-10000</option>
+                    <option value="10000-20000">₹10000-20000</option>
+                    <option value="20000-30000">₹20000-30000</option>
+                    <option value="30000-40000">₹30000-40000</option>
+                    <option value="40000-50000">₹40000-50000</option>
+                    <option value="50000-60000">₹50000-60000</option>
+                    <!-- Add more budget options as needed -->
+                </select>
+                <br>
+                <input class="forminput formbtn " type="submit" value="Filter">
+            </form>
+            
+            
+        </div>
+        
+
+
+        </div>
+        <hr class="line">
+
+
+        <div class="company" id="ab">
+            <div class="text">
+                <div class="hd t ">About Us.</div>
+                <div class="ct t" id="abttext">
+                    Welcome to our specialized smartphone analytics website! <br>
+                    <br> We're your one-stop source for smartphone insights. <br><br>Whether you're looking for a specific brand or detailed reviews, we've got you covered. <br><br>You can effortlessly search by company or explore various models via review tags. <br> <br>We're here to streamline your smartphone research, delivering concise and informative content. Join us for a hassle-free smartphone analysis journey!
+                </div>
+                
+            </div>
+            <figure class="image">
+                <img  class="im" id="abt"  src="/static/about.gif" alt="">
+            </figure>
+            
+        
+
+
+        </div>
+        <hr class="line">
+
+        <div>
+            <div class="slider" id="contactsection">
+                <span id="head2" >Contact Us</span>
+                    <div class="contactus">
+                        <p class="contacttext">Have questions or feedback? We'd love to hear from you.</p>
+
+    <form class="contact-form">
+      <label for="name">Name:</label>
+      <input class="inp" type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input  class="inp" type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea  class="inp"id="message" name="message" rows="4" required></textarea>
+
+      <button type="submit" class="btn cusbtn t" id="b1">Send Message</button>
+    </form>
+                    </div>
+                    <div class="imgslider" >
+    
+                    </div>
+            </div>
+        </div>
+    </div>
+        <hr class="line">
+        
+        <div class="ft">
+            <a href="#" onclick="focusHomeSection()"class="ancc">Home</a>
+            <a href="#" onclick="focusCompanySection()"class="ancc">Company</a>
+            <a href="#" onclick="focusReviewSection()"class="ancc">Review</a>
+            <a href="#" onclick="focusAboutSection()"class="ancc">About Us</a>
+            <a href="#" onclick="focusContactUsSection()"class="ancc">Contact Us</a>
+            <a href="#" onclick="focusContactUsSection()"class="ancc">Scroll up </a>
+        </div>
+        <!-- <hr class="line"> -->
+        <div class="name">
+            analytix@gmail.com 
+        </div>
+</div>
+</body>
+</html>
